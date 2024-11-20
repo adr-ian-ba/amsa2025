@@ -7,15 +7,91 @@
     <link rel="stylesheet" href="./style/lg/style.css">
     <link rel="stylesheet" href="./style/md/style.css">
     <link rel="stylesheet" href="./style/sm/style.css">
-    <link rel="stylesheet" href="./style/xs/style.css">
     <title>amsa-2025</title>
 </head>
 <body>
     
-    <h1>TRACKING PROGRESS AMSA</h1>
+    <section class="hero">
+        <div class="sun"></div>
+        <img class="cloud" src="./assets/images/CLOUD - 1.png" alt="">
 
+        <div class="container-hero">
+            <div class="reborn logo">
+                <img class="logo-bare" src="./assets/images/LOGO IMSTC - BARE.png" alt="">
 
-    <script src="./script/animation.js"></script>
+                <div class="reborn letter r">
+                    <img src="./assets/images/R.png" alt="Letter R">
+                </div>
+                <div class="reborn letter e">
+                    <img src="./assets/images/E.png" alt="Letter E">
+                </div>
+                <div class="reborn letter o">
+                    <img src="./assets/images/O.png" alt="Letter O">
+                </div>
+                <div class="reborn letter r-small">
+                    <img src="./assets/images/R-small.png" alt="Small Letter R">
+                </div>
+                <div class="reborn letter n">
+                    <img src="./assets/images/N.png" alt="Letter N">
+                </div>
+            </div>
+
+            <div class="complete-logo">
+                <img src="./assets/images/LOGO IMSTC.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+
+    </section>
+
+    <script src="./script/word.js"></script>
     <script src="./script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script> 
+
+
+    <script>
+
+        //aniomation
+        let tlLogoBare = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".logo-bare",
+                start : "250px center",
+                end : "1200px center",
+                scrub : true,
+                markers : true
+            }
+        })
+
+        tlLogoBare.fromTo(
+            ".logo-bare", 
+            { 
+                y: 0,
+                x : 0,
+                rotate: 0
+            }, 
+            { 
+                y: 1100,
+                x : -500,
+                rotate: -15,
+                ease: "power1.out"
+            } 
+        );
+
+        //smooth scroll
+        const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+        console.log(e);
+        });
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+    </script>
 </body>
 </html>
