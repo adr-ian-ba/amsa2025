@@ -14,9 +14,18 @@
     <section class="hero">
         <div class="sun"></div>
         <img class="cloud" src="./assets/images/CLOUD - 1.png" alt="">
+        <!-- <img class="plane" src="./assets/images/PLANE.png" alt="">
+        <svg width="800" height="300">
+            <path id="customPath" d="M 0 150 Q 100 100 150 150 Q 150 250 250 250 Q 300 150 400 150 C 550 250 650 150 600 50 C 500 0 400 50 450 100 Q 700 250 800 250" 
+                  fill="none" stroke="black" stroke-width="2" />
+        </svg> -->
 
         <div class="container-hero">
             <div class="reborn logo">
+                <div class="reborn letter b">
+                    <img src="./assets/images/B.png" alt="Letter O">
+                </div>
+
                 <img class="logo-bare" src="./assets/images/LOGO IMSTC - BARE.png" alt="">
 
                 <div class="reborn letter r">
@@ -25,6 +34,11 @@
                 <div class="reborn letter e">
                     <img src="./assets/images/E.png" alt="Letter E">
                 </div>
+
+                <div class="reborn letter o">
+                    <img src="./assets/images/O.png" alt="Letter O">
+                </div>
+                
                 <div class="reborn letter o">
                     <img src="./assets/images/O.png" alt="Letter O">
                 </div>
@@ -43,44 +57,460 @@
     </section>
 
     <section class="about">
-
     </section>
 
     <script src="./script/word.js"></script>
     <script src="./script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script> 
 
 
     <script>
 
-        //aniomation
+
+        //animation
+        function initializeAnimation() {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+        if(window.matchMedia("(min-width: 1263px)").matches){
+            let tlLogoBare = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".logo-bare",
+                start : "80% center",
+                end : "350% center",
+                scrub : true,
+                markers : true
+                }
+            })
+            
+
+            tlLogoBare.fromTo(
+                ".logo-bare", 
+                { 
+                    y: 0,
+                    x : 0,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1100,
+                    x : -500,
+                    rotate: -15,
+                    ease: "power1.out"
+                } 
+            )
+
+            tlLogoBare.fromTo(
+                ".r",
+                {
+                    y:0,
+                    x:0,
+                    scale:1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:1100,
+                    x:-275,
+                    scale:0.5,
+                    rotate:-80
+                },
+                "<"
+            )
+
+            tlLogoBare.fromTo(
+                ".e",
+                {
+                    y:0,
+                    x:0,
+                    scale:1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:1020,
+                    x:-445,
+                    scale:0.5,
+                    rotate:-70
+                },
+                "<"
+            )
+
+            tlLogoBare.fromTo(
+                ".b",
+                {
+                    y:0,
+                    x:0,
+                    scale:0.1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:840,
+                    x:-650,
+                    scale:0.5,
+                    rotate:-40
+                },
+                "<"
+            )
+
+            tlLogoBare.fromTo(
+                ".o",
+                {
+                    y:0,
+                    x:0,
+                    scale:1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:910,
+                    x:-690,
+                    scale:0.5,
+                    rotate:10
+                },
+                "<"
+            )
+
+            tlLogoBare.fromTo(
+                ".r-small",
+                {
+                    y:0,
+                    x:0,
+                    scale:1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:950,
+                    x:-800,
+                    scale:0.5,
+                    rotate:40
+                },
+                "<"
+            )
+
+            tlLogoBare.fromTo(
+                ".n",
+                {
+                    y:0,
+                    x:0,
+                    scale:1,
+                    rotate:-10
+                    
+                },
+                {
+                    y:1025,
+                    x:-959,
+                    scale:0.5,
+                    rotate:55
+                },
+                "<"
+            )
+        }
+
+    if (window.matchMedia("(max-width: 1262px) and (min-width: 851px)").matches) {
         let tlLogoBare = gsap.timeline({
             scrollTrigger :{
                 trigger: ".logo-bare",
                 start : "250px center",
-                end : "1200px center",
+                end : "1100px center",
                 scrub : true,
                 markers : true
+                }
+            })
+
+            tlLogoBare.fromTo(
+                ".logo-bare", 
+                { 
+                    y: 0,
+                    x : 0,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1100,
+                    x : -200,
+                    rotate: -15,
+                    ease: "power1.out"
+                } 
+            )
+            tlLogoBare.fromTo(
+                ".r", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1100,
+                    x : -50,
+                    scale:0.5,
+                    rotate: -80,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".e", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1050,
+                    x : -160,
+                    scale:0.5,
+                    rotate: -80,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".b", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:0.1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 935,
+                    x : -300,
+                    scale:0.5,
+                    rotate: -60,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".o", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 960,
+                    x : -350,
+                    scale:0.5,
+                    rotate: 0,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".r-small", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 970,
+                    x : -410,
+                    scale:0.5,
+                    rotate: 40,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".n", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1020,
+                    x : -510,
+                    scale:0.5,
+                    rotate: 70,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+
+            
+    }
+
+    if (window.matchMedia("(max-width: 850px) and (min-width: 668px)").matches) {
+        let tlLogoBare = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".logo-bare",
+                start : "250px center",
+                end : "1100px center",
+                scrub : true,
+                }
+            })
+
+            tlLogoBare.fromTo(
+                ".logo-bare", 
+                { 
+                    y: 0,
+                    x : 0,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1100,
+                    x : -150,
+                    rotate: -15,
+                    ease: "power1.out"
+                } 
+            )
+            tlLogoBare.fromTo(
+                ".r", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1100,
+                    x : -47,
+                    scale:0.5,
+                    rotate: -85,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".e", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1060,
+                    x : -125,
+                    scale:0.5,
+                    rotate: -80,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".b", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:0.1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 980,
+                    x : -230,
+                    scale:0.5,
+                    rotate: -60,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".o", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1005,
+                    x : -250,
+                    scale:0.5,
+                    rotate: 0,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".r-small", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1015,
+                    x : -300,
+                    scale:0.5,
+                    rotate: 40,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+            tlLogoBare.fromTo(
+                ".n", 
+                { 
+                    y: 0,
+                    x : 0,
+                    scale:1,
+                    rotate: 0
+                }, 
+                { 
+                    y: 1050,
+                    x : -355,
+                    scale:0.5,
+                    rotate: 70,
+                    ease: "power1.out"
+                },
+                "<"
+            )
+    }
+
+    if (window.matchMedia("(max-width: 667px)").matches) {
+        let tlLogoBare = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".complete-logo",
+                start : "250px center",
+                end : "1100px center",
+                scrub : true,
+                }
+            })
+
+            tlLogoBare.fromTo(
+                ".complete-logo", 
+                { 
+                    y: 0,
+                    rotate: 0
+                }, 
+                { 
+                    y: 500,
+                    rotate: -20,
+                    ease: "power1.out"
+                } 
+            );
+        }
+    }
+            
+    initializeAnimation();
+
+    let lastWidth = window.innerWidth;
+    let debounceTimeout
+
+    window.addEventListener("resize", () => {
+    clearTimeout(debounceTimeout);
+
+    debounceTimeout = setTimeout(() => {
+        const currentWidth = window.innerWidth;
+
+            if (Math.abs(currentWidth - lastWidth) >= 100) {
+                lastWidth = currentWidth; 
+                initializeAnimation(); 
             }
-        })
-
-        tlLogoBare.fromTo(
-            ".logo-bare", 
-            { 
-                y: 0,
-                x : 0,
-                rotate: 0
-            }, 
-            { 
-                y: 1100,
-                x : -500,
-                rotate: -15,
-                ease: "power1.out"
-            } 
-        );
-
+        }, 200); 
+    });
         //smooth scroll
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {

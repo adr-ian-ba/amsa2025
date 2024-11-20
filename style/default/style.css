@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "boston-angel";
+  src: url("../../assets/boston-angel-regular.ttf");
+}
 :root {
   --60-color: #1a2754;
   --30-color: #395985;
@@ -9,6 +13,7 @@
 
 html {
   height: 500vh;
+  overflow-x: hidden;
 }
 
 * {
@@ -19,6 +24,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.15rem;
 }
 
 section {
@@ -72,6 +78,18 @@ section {
   filter: blur(50px);
   opacity: 0.8;
 }
+.hero svg {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero .plane {
+  width: 20rem;
+  position: absolute;
+  top: 10rem;
+  right: -20rem;
+}
 .hero .container-hero {
   width: 90%;
   position: relative;
@@ -121,6 +139,13 @@ section {
 .hero .container-hero .r {
   left: -20rem;
   transform: translateY(-50%) rotate(-15deg);
+}
+.hero .container-hero .b {
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  scale: 0.5;
+  z-index: -1;
 }
 .hero .container-hero .o {
   left: 13rem;
@@ -187,7 +212,7 @@ section {
     left: 16rem !important;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 667px) {
   .reborn {
     display: none;
   }
@@ -202,7 +227,7 @@ section {
   }
 }
 .about {
-  height: 100vh;
+  height: 70rem;
   width: 100%;
   background-color: var(--60-color);
 }/*# sourceMappingURL=style.css.map */
