@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face{
+    font-family: "kaftus";
+    src: url("../../assets/Kaftus.ttf");
+}
+
+:root{
+    --60-color : #1a2754;
+    --30-color : #395985;
+    --10-color : #FCADCB;
+
+    --text-color : #fcfbf9
+}
+
+h1{
+    font-family: kaftus;
+}
