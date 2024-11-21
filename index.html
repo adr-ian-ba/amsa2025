@@ -53,10 +53,22 @@
             <div class="complete-logo">
                 <img src="./assets/images/LOGO IMSTC.png" alt="">
             </div>
+
+            <div class="about-card">
+                <h1>WHY REBORN</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam aut iure, libero impedit pariatur aliquid esse veniam! Dolores tempore reprehenderit corrupti. Veniam hic reprehenderit dolorem saepe perspiciatis excepturi quasi, quo aperiam maxime itaque fuga totam voluptatum vero ipsum alias! Similique sed vel ipsam saepe aspernatur, quam velit assumenda. Aspernatur, molestiae.</p>
+                <button class="register">Register</button>
+            </div>
         </div>
     </section>
 
     <section class="about">
+        <div class="about-spacer"></div>
+        <div class="about-card-two">
+            <h1>WHY REBORN</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam aut iure, libero impedit pariatur aliquid esse veniam! Dolores tempore reprehenderit corrupti. Veniam hic reprehenderit dolorem saepe perspiciatis excepturi quasi, quo aperiam maxime itaque fuga totam voluptatum vero ipsum alias! Similique sed vel ipsam saepe aspernatur, quam velit assumenda. Aspernatur, molestiae.</p>
+            <button class="register">Register</button>
+        </div>
     </section>
 
     <script src="./script/word.js"></script>
@@ -84,7 +96,7 @@
                 markers : true
                 }
             })
-            
+
 
             tlLogoBare.fromTo(
                 ".logo-bare", 
@@ -97,7 +109,8 @@
                     y: 1100,
                     x : -500,
                     rotate: -15,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 } 
             )
 
@@ -114,7 +127,8 @@
                     y:1100,
                     x:-275,
                     scale:0.5,
-                    rotate:-80
+                    rotate:-80,
+                    duration:5
                 },
                 "<"
             )
@@ -132,7 +146,8 @@
                     y:1020,
                     x:-445,
                     scale:0.5,
-                    rotate:-70
+                    rotate:-70,
+                    duration:5
                 },
                 "<"
             )
@@ -150,7 +165,8 @@
                     y:840,
                     x:-650,
                     scale:0.5,
-                    rotate:-40
+                    rotate:-40,
+                    duration:5
                 },
                 "<"
             )
@@ -168,7 +184,8 @@
                     y:910,
                     x:-690,
                     scale:0.5,
-                    rotate:10
+                    rotate:10,
+                    duration:5
                 },
                 "<"
             )
@@ -186,7 +203,8 @@
                     y:950,
                     x:-800,
                     scale:0.5,
-                    rotate:40
+                    rotate:40,
+                    duration:5
                 },
                 "<"
             )
@@ -204,10 +222,20 @@
                     y:1025,
                     x:-959,
                     scale:0.5,
-                    rotate:55
+                    rotate:55,
+                    duration:5
                 },
                 "<"
             )
+
+            tlLogoBare
+                .to(".about-card", {
+                    y: 1100, 
+                })
+                .to(".about-card", {
+                    x: "-60rem", 
+                    duration: 2,
+                });
         }
 
     if (window.matchMedia("(max-width: 1262px) and (min-width: 851px)").matches) {
@@ -232,7 +260,8 @@
                     y: 1100,
                     x : -200,
                     rotate: -15,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 } 
             )
             tlLogoBare.fromTo(
@@ -248,7 +277,8 @@
                     x : -50,
                     scale:0.5,
                     rotate: -80,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
@@ -265,7 +295,8 @@
                     x : -160,
                     scale:0.5,
                     rotate: -80,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
@@ -282,7 +313,8 @@
                     x : -300,
                     scale:0.5,
                     rotate: -60,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
@@ -299,7 +331,8 @@
                     x : -350,
                     scale:0.5,
                     rotate: 0,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
@@ -316,7 +349,8 @@
                     x : -410,
                     scale:0.5,
                     rotate: 40,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
@@ -333,10 +367,21 @@
                     x : -510,
                     scale:0.5,
                     rotate: 70,
-                    ease: "power1.out"
+                    ease: "power1.out",
+                    duration:5
                 },
                 "<"
             )
+
+            tlLogoBare
+                .to(".about-card", {
+                    y: 1050, 
+                    duration: 1, 
+                })
+                .to(".about-card", {
+                    x: "-58rem", 
+                    duration: 2,
+                });
 
             
     }
@@ -467,6 +512,16 @@
                 },
                 "<"
             )
+
+            tlLogoBare
+                .to(".about-card", {
+                    y: 950, 
+                    duration: 1, 
+                })
+                .to(".about-card", {
+                    x: "-58rem", 
+                    duration: 1,
+                });
     }
 
     if (window.matchMedia("(max-width: 667px)").matches) {
@@ -486,11 +541,11 @@
                     rotate: 0
                 }, 
                 { 
-                    y: 500,
+                    y: 400,
                     rotate: -20,
                     ease: "power1.out"
                 } 
-            );
+            )
         }
     }
             

@@ -19,6 +19,10 @@ html{
     overflow-x: hidden;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 *{
     font-family: Montserrat, "arial";
     text-decoration: none;
@@ -27,7 +31,7 @@ html{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    letter-spacing: .15rem;
+    letter-spacing: .1rem;
 }
 
 section{
@@ -264,4 +268,88 @@ section{
     height: 70rem;
     width: 100%;
     background-color: var(--60-color);
+}
+
+.about-card{
+    position: absolute;
+    background-color: var(--30-color);
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 40rem;
+
+    top: 0;
+    right: -60rem;
+
+    h1{
+        font-family: boston-angel;
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .register{
+        background-color: var(--10-color);
+        height: 3rem;
+        width: 40%;
+        font-size: 1rem;
+        color: var(--60-color);
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        margin-top: 2rem;
+    }
+}
+
+.about-card-two{
+    position: relative;
+    background-color: var(--30-color);
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+
+    h1{
+        font-family: boston-angel;
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .register{
+        background-color: var(--10-color);
+        height: 3rem;
+        width: 40%;
+        font-size: 1rem;
+        color: var(--30-color);
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        margin-top: 2rem;
+    }
+}
+.about-spacer{
+    height: 10rem;
+}
+@media (max-width: 1262px) {
+    .about-card{
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .about-card{
+        max-width: 20rem;
+    }
+
+}
+
+@media (max-width: 667px) {
+    .about-card{
+        display: none;
+    }
+
+    .about-card-two{
+        display: block;
+    }
+
+    .about{
+        height: 50rem;
+    }
 }
