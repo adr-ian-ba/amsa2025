@@ -45,7 +45,7 @@ body{
     text-decoration: none;
     color: var(--text-color);
     list-style: none;
-    letter-spacing: .1rem;
+    // letter-spacing: .1rem;
 }
 
 *,
@@ -89,7 +89,7 @@ section{
 }
 
 .logo-bare-glow {
-    animation: pulseGlow 3s infinite ease-in-out; 
+    animation: pulseGlow 5s infinite ease-in-out; 
     transition: filter 0.5s ease;
 }
 
@@ -451,6 +451,7 @@ section{
     }
 }
 
+
 .timeline {
     background-color: var(--blue-light);
     padding-bottom: 10rem;
@@ -603,6 +604,8 @@ section{
   .guideline{
     height: 100%;
     background-color: var(--blue-light);
+    padding-bottom: 10rem ;
+
 
 
     .guideline-container{
@@ -698,17 +701,130 @@ section{
     }
   }
 
+  .faq{
+    background-color: var(--60-color);
+    height: 100vh;
+  }
+
 @keyframes pulseGlow {
     0% {
-        filter: drop-shadow(0 0 20px var(--10-color))
-                drop-shadow(0 0 40px var(--pink-dark));
+        filter: drop-shadow(0 0 0px var(--10-color))
+                drop-shadow(0 0 0px var(--pink-dark));
     }
     50% {
         filter: drop-shadow(0 0 40px var(--10-color))
                 drop-shadow(0 0 80px var(--pink-dark));
     }
-    100% {
+    70% {
         filter: drop-shadow(0 0 20px var(--10-color))
                 drop-shadow(0 0 40px var(--pink-dark));
     }
+    100% {
+        filter: drop-shadow(0 0 0px var(--10-color))
+                drop-shadow(0 0 0px var(--pink-dark));
+    }
 }
+:root {
+    --bg1: url("../../assets/throughout/10.png");
+    --bg2: url("../../assets/throughout/11.jpg");
+    --bg3: url("../../assets/throughout/12.jpg");
+    --bg4: url("../../assets/throughout/12.jpg");
+  }
+  
+  @function get-background($index) {
+    @return var(--bg#{$index});
+  }
+  
+  .throughout-wrapper{
+    padding-top: 10rem !important;
+    padding: 0;
+    background: var(--60-color);
+
+    h1{
+        font-size: 3rem;
+        padding: 1rem;
+        margin-left: 5rem;
+        border-bottom: 3px solid var(--10-color) ;
+        width: fit-content;
+        font-family: boston-angel;
+    }
+
+    @media (max-width: 700px) {
+        h1{
+            font-size: 2rem;
+            padding: 0 3rem;
+            margin: 0;
+            white-space: pre-line;
+            width: 100%;
+        }
+    }
+  }
+  .throughout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+  }
+  
+  .box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    max-width: 1100px;
+    height: 70vh;
+    //max-height: 900px;
+    padding: 1rem;
+    margin: 0 auto;
+  
+    .box {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          background: get-background($i);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: auto 200%;
+        }
+      }
+  
+      width: 25%;
+      height: 340px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: width 0.5s ease-in-out;
+      position: relative;
+      overflow: hidden;
+  
+      .overlay {
+        opacity: 0;
+      }
+  
+      &.closed {
+        width: 5%;
+        .overlay {
+          opacity: 1;
+        }
+      }
+  
+      &.expanded {
+        width: 85%;
+      }
+    }
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  }
+  
