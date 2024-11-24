@@ -277,6 +277,17 @@ section {
   height: 60rem;
   width: 100%;
   background-color: var(--60-color);
+  position: relative;
+}
+.about .glowing-blob {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--10-color);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none; /* Ensures the blob doesn't interfere with interactions */
+  transition: transform 0.05s ease-out; /* Smooth following effect */
 }
 
 .about-card {
@@ -399,9 +410,53 @@ section {
   }
 }
 .timeline {
+  position: relative;
   background-color: var(--blue-light);
   padding-bottom: 10rem;
   color: var(--60-color);
+}
+.timeline .bg {
+  position: absolute;
+}
+.timeline .book-1 {
+  top: 0;
+  left: 0;
+  width: 15rem;
+}
+.timeline .could-timeline-1 {
+  top: 40rem;
+  right: 0;
+  width: 25rem;
+  transform: rotate(-90deg);
+}
+.timeline .book-2 {
+  top: 70rem;
+  left: 0;
+  width: 15rem;
+}
+@media (max-width: 1800px) {
+  .timeline .could-timeline-1 {
+    top: 35rem;
+    width: 20rem;
+  }
+}
+@media (max-width: 750px) {
+  .timeline .book-1 {
+    top: 100px;
+    width: 13rem;
+  }
+  .timeline .could-timeline-1 {
+    top: 50rem;
+    width: 15rem;
+  }
+  .timeline .book-2 {
+    width: 10rem;
+  }
+}
+@media (max-width: 600px) {
+  .timeline .bg {
+    display: none;
+  }
 }
 .timeline .hero-timeline {
   margin: 0 auto;
@@ -523,6 +578,7 @@ section {
 .guideline .guideline-container .guideline-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding-bottom: 2rem;
 }
@@ -862,6 +918,21 @@ section {
   right: -100px;
   transform: scaleX(-1);
 }
+.sponsor h1 {
+  font-family: boston-angel;
+  font-size: 4.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.sponsor .sponsor-video {
+  aspect-ratio: 16/9;
+  width: 500px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 @media (max-width: 1110px) {
   .sponsor .cloud {
     width: 30rem;
@@ -885,6 +956,11 @@ section {
     right: -150px;
   }
 }
+@media (max-width: 650px) {
+  .sponsor .sponsor-video {
+    width: 350px;
+  }
+}
 @media (max-width: 380px) {
   .sponsor .cloud {
     width: 15rem;
@@ -896,11 +972,7 @@ section {
   .sponsor .cloud-2-sponsor {
     right: -100px;
   }
-}
-.sponsor h1 {
-  font-family: boston-angel;
-  font-size: 4.5rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+  .sponsor .sponsor-video {
+    width: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */

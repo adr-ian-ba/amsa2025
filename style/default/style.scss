@@ -47,6 +47,7 @@ body{
     color: var(--text-color);
     list-style: none;
     // letter-spacing: .1rem;
+    //pointer-events: none;
 }
 
 *,
@@ -331,6 +332,18 @@ section{
     height: 60rem;
     width: 100%;
     background-color: var(--60-color);
+    position: relative;
+
+    .glowing-blob {
+        width: 10rem;
+        height: 10rem;
+        background-color: var(--10-color);
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none; /* Ensures the blob doesn't interfere with interactions */
+        transition: transform 0.05s ease-out; /* Smooth following effect */
+    }
 }
 
 .about-card{
@@ -476,9 +489,64 @@ section{
 
 
 .timeline {
+    position: relative;
     background-color: var(--blue-light);
     padding-bottom: 10rem;
     color: var(--60-color);
+
+    .bg{
+        position: absolute;
+    }
+
+    .book-1{
+        top: 0;
+        left: 0;
+        width: 15rem;
+    }
+    .could-timeline-1{
+        top: 40rem;
+        right: 0;
+        width: 25rem;
+        transform: rotate(-90deg);
+    }
+
+    .book-2{
+        top: 70rem;
+        left: 0;
+        width: 15rem;
+    }
+
+    @media (max-width: 1800px) {
+        .could-timeline-1{
+            top: 35rem;
+            width: 20rem;
+        }
+    
+    }
+
+    @media (max-width: 750px) {
+        .book-1{
+            top: 100px;
+            width: 13rem;
+        }
+
+        .could-timeline-1{
+            top: 50rem;
+            width: 15rem;
+        }
+
+        .book-2{
+            width: 10rem;
+        }
+    
+    }
+
+    @media (max-width : 600px) {
+        .bg{
+            display: none;
+        }
+    }
+
 
     .hero-timeline{
         margin: 0 auto;
@@ -638,6 +706,7 @@ section{
         .guideline-flex{
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 1rem;
             padding-bottom: 2rem;
 
@@ -1007,6 +1076,23 @@ section{
         transform: scaleX(-1);
     }
 
+    h1{
+        font-family: boston-angel;
+        font-size: 4.5rem;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .sponsor-video{
+        aspect-ratio: 16/9;
+        width: 500px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
     @media (max-width: 1110px) {
         .cloud{
             width: 30rem ;
@@ -1035,6 +1121,13 @@ section{
         }
     }
 
+    @media (max-width: 650px) {
+        .sponsor-video{
+            width: 350px;
+        }
+    }
+
+
     @media (max-width: 380px) {
         .cloud{
             width: 15rem ;
@@ -1048,14 +1141,13 @@ section{
         .cloud-2-sponsor{
             right: -100px;
         }
+
+        .sponsor-video{
+            width: 300px;
+        }
     }
 
     
 
-    h1{
-        font-family: boston-angel;
-        font-size: 4.5rem;
-        width: fit-content;
-        margin: 0 auto;
-    }
+
 }

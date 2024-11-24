@@ -65,7 +65,7 @@
     </section>
 
 
-    <section class="about" id="about-section">
+    <section class="about">
         <div class="about-spacer"></div>
         <div class="about-card-two">
             <h1>WHY REBORN</h1>
@@ -157,6 +157,10 @@
           </li>
           
         </ul>
+        
+        <img class="bg book-1" src="./assets/images/BOOKS - 1.png" alt="">
+        <img class="bg could-timeline-1" src="./assets/images/CLOUD - 2.png" alt="">
+        <img class="bg book-2" src="./assets/images/BOOKS - 2.png" alt="">
     </section>
 
     <section class="guideline">
@@ -307,6 +311,10 @@
         <img class="cloud cloud-2-sponsor" src="./assets/images/CLOUD - 2.png" alt="">
 
         <h1>Sponsors</h1>
+
+        <iframe class="sponsor-video" src="https://www.youtube.com/embed/u31qwQUeGuM?si=qZ3yXPiSREgqcBz5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
     </section>
 
     <script src="./script/word.js"></script>
@@ -333,6 +341,7 @@
                 scrub : true,
                 }
             })
+
 
 
             tlLogoBare.fromTo(
@@ -811,6 +820,64 @@
             }
         }, 200); 
     });
+
+    let tlBook = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".book-1",
+                start : "top center",
+                end : "bottom center",
+                scrub : true,
+                }
+            })
+            tlBook
+                .fromTo(
+                    ".book-1", 
+                    { x: "-100%",
+                        rotate:0
+                     }, 
+                    { x: "-20%",
+                        rotate: 20
+                     }  
+                );
+
+        let tlCloud1 = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".could-timeline-1",
+                start : "top center",
+                end : "bottom center",
+                scrub : true,
+                }
+            })
+            tlCloud1
+                .fromTo(
+                    ".could-timeline-1", 
+                    { x: "100%",
+                        rotate:0
+                     }, 
+                    { x: "30%",
+                        rotate: "-120deg"
+                     }  
+                );
+
+        let tlBook2 = gsap.timeline({
+            scrollTrigger :{
+                trigger: ".book-2",
+                start : "top center",
+                end : "bottom center",
+                scrub : true,
+                }
+            })
+            tlBook2
+                .fromTo(
+                    ".book-2", 
+                    { x: "-100%",
+                        rotate:0
+                     }, 
+                    { x: "-20%",
+                        rotate: 20
+                     }  
+                );
+
         //smooth scroll
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {
