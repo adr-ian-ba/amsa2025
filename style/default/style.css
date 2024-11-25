@@ -20,6 +20,7 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: hidden;
+  position: relative;
 }
 
 * {
@@ -279,16 +280,6 @@ section {
   background-color: var(--60-color);
   position: relative;
 }
-.about .glowing-blob {
-  width: 10rem;
-  height: 10rem;
-  background-color: var(--10-color);
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none; /* Ensures the blob doesn't interfere with interactions */
-  transition: transform 0.05s ease-out; /* Smooth following effect */
-}
 
 .about-card {
   position: absolute;
@@ -324,7 +315,7 @@ section {
   transition: all 0.2s linear;
 }
 .about-card .button-container .register:hover {
-  background-color: #1a2754;
+  background-color: var(--60-color);
 }
 .about-card .button-container .explore {
   border: 2px solid var(--60-color);
@@ -975,4 +966,114 @@ section {
   .sponsor .sponsor-video {
     width: 300px;
   }
+}
+
+.footer {
+  display: flex;
+  background-color: var(--10-color);
+  border-top: 10px solid var(--30-color);
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+.footer .logo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.footer .logo svg {
+  width: 2rem;
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--60-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  height: 4rem;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+nav .logo img {
+  width: 4rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+nav ul li a {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+@media (max-width: 740px) {
+  nav ul {
+    display: none;
+  }
+}
+nav button {
+  height: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  flex: 1fr;
+  cursor: pointer;
+  background-color: var(--10-color);
+  transition: all 0.2s linear;
+  padding: 0 1rem;
+}
+nav button:hover {
+  background-color: var(--30-color);
+}
+
+.animate-on-observe {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-up {
+  transform: translateY(50px);
+}
+
+.animate-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-down {
+  transform: translateY(-50px);
+}
+
+.animate-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-left {
+  transform: translateX(-50px);
+}
+
+.animate-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  transform: translateX(50px);
+}
+
+.animate-right.active {
+  opacity: 1;
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
