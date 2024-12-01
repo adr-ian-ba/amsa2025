@@ -814,16 +814,16 @@ section{
     }
 }
 
-:root {
-    --bg1: url("../../assets/throughout/10.png");
-    --bg2: url("../../assets/throughout/11.jpg");
-    --bg3: url("../../assets/throughout/12.jpg");
-    --bg4: url("../../assets/throughout/12.jpg");
-  }
+// :root {
+//     --bg1: url("../../assets/throughout/10.png");
+//     --bg2: url("../../assets/throughout/11.jpg");
+//     --bg3: url("../../assets/throughout/12.jpg");
+//     --bg4: url("../../assets/throughout/12.jpg");
+//   }
   
-  @function get-background($index) {
-    @return var(--bg#{$index});
-  }
+//   @function get-background($index) {
+//     @return var(--bg#{$index});
+//   }
   
   .throughout-wrapper{
     padding: 0;
@@ -868,18 +868,19 @@ section{
     //max-height: 900px;
     padding: 1rem;
     margin: 0 auto;
-  
+
+
     .box {
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          background: get-background($i);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position:center;
-          background-size: auto 200%;
-        }
-      }
-  
+       //@for $i from 1 through 4 {
+         //&:nth-child(#{$i}) {
+            // background: get-background($i);
+
+         //}
+      //}
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position:center !important;
+      background-size: auto 200%;
       width: 25%;
       height: 340px;
       border-radius: 25px;
@@ -902,6 +903,22 @@ section{
       &.expanded {
         width: 85%;
       }
+    }
+
+    .box-1{
+        background: url("../../assets/throughout/10.png");
+    }
+
+    .box-2{
+        background: url("../../assets/throughout/11.jpg");
+    }
+
+    .box-3{
+        background: url("../../assets/throughout/12.jpg");
+    }
+
+    .box-4{
+        background: url("../../assets/throughout/12.jpg");
     }
   }
   
