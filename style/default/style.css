@@ -968,6 +968,18 @@ nav .mobile .inner ul .download:hover {
   padding: 1rem;
   margin: 0 auto;
 }
+.box-container .box-1 {
+  background: url("../../assets/throughout/10.png") !important;
+}
+.box-container .box-2 {
+  background: url("../../assets/throughout/10.png") !important;
+}
+.box-container .box-3 {
+  background: url("../../assets/throughout/10.png") !important;
+}
+.box-container .box-4 {
+  background: url("../../assets/throughout/10.png") !important;
+}
 .box-container .box {
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -992,18 +1004,6 @@ nav .mobile .inner ul .download:hover {
 }
 .box-container .box.expanded {
   width: 85%;
-}
-.box-container .box-1 {
-  background: url("../../assets/throughout/10.png");
-}
-.box-container .box-2 {
-  background: url("../../assets/throughout/11.jpg");
-}
-.box-container .box-3 {
-  background: url("../../assets/throughout/12.jpg");
-}
-.box-container .box-4 {
-  background: url("../../assets/throughout/12.jpg");
 }
 
 .overlay {
