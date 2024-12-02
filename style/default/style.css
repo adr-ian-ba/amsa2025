@@ -9,7 +9,7 @@
   --10-color: #FCADCB;
   --pink-dark: #701459;
   --blue-light: #A7BDE4;
-  --text-color: #fcfbf9 ;
+  --text-color: #FCFBF9 ;
 }
 
 html {
@@ -59,6 +59,157 @@ section {
 @media (min-width: 1440px) {
   section {
     padding: 0 15rem;
+  }
+}
+
+nav {
+  position: relative;
+  z-index: 100 !important;
+}
+nav .desktop {
+  background-color: var(--60-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  color: var(--white-color);
+}
+nav .desktop .logo-wrapper {
+  width: 3rem;
+  height: 3rem;
+}
+nav .desktop .logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav .desktop ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .desktop ul a {
+  padding: 0.1rem 0.5rem;
+}
+nav .desktop ul .download {
+  background-color: var(--10-color);
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  transition: all 0.1s linear;
+}
+nav .desktop ul .download li {
+  color: var(--60-color);
+  font-family: boston-angel;
+  width: 6rem;
+  text-align: center;
+  transition: all 0.1s linear;
+}
+nav .desktop ul .download li:hover {
+  color: var(--text-color);
+}
+nav .desktop ul .download:hover {
+  background-color: var(--30-color);
+}
+nav .mobile {
+  position: relative;
+  z-index: 100;
+  display: none;
+}
+nav .mobile .outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 0 2rem;
+}
+nav .mobile .outer .logo-wrapper {
+  width: 3rem;
+  height: 3rem;
+}
+nav .mobile .outer .logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav .mobile .outer svg {
+  padding: 1rem;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  color: var(--white-color);
+}
+nav .mobile .middle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+nav .mobile .inner {
+  transition: all 0.2s linear;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: var(--60-color);
+  height: 100vh;
+  width: 40%;
+}
+nav .mobile .inner ul {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+nav .mobile .inner ul a {
+  color: var(--black-color);
+}
+nav .mobile .inner ul a li {
+  padding: 1rem;
+  transition: all 0.1s linear;
+}
+nav .mobile .inner ul a li:hover {
+  background-color: var(--primary-color);
+}
+nav .mobile .inner ul .download {
+  background-color: var(--10-color);
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  transition: all 0.1s linear;
+}
+nav .mobile .inner ul .download li {
+  color: var(--60-color);
+  font-family: boston-angel;
+  width: 6rem;
+  text-align: center;
+  transition: all 0.1s linear;
+}
+nav .mobile .inner ul .download li:hover {
+  color: var(--text-color);
+}
+nav .mobile .inner ul .download:hover {
+  background-color: var(--30-color);
+}
+@media (max-width: 900px) {
+  nav .desktop {
+    display: none;
+  }
+  nav .mobile {
+    display: block;
   }
 }
 
@@ -281,6 +432,56 @@ section {
   position: relative;
 }
 
+.about-card-reborn-two {
+  background-color: var(--30-color);
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 40rem;
+  margin-top: 1rem;
+  display: none;
+}
+.about-card-reborn-two h1 {
+  font-family: boston-angel;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.about-card-reborn-two .button-container {
+  display: flex;
+  gap: 1rem;
+}
+.about-card-reborn-two .button-container .button {
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  margin-top: 2rem;
+  flex: 1fr;
+  width: 100%;
+  cursor: pointer;
+}
+.about-card-reborn-two .button-container .register {
+  background-color: var(--10-color);
+  transition: all 0.2s linear;
+}
+.about-card-reborn-two .button-container .register:hover {
+  background-color: var(--60-color);
+}
+.about-card-reborn-two .button-container .explore {
+  border: 2px solid var(--60-color);
+  background-color: transparent;
+  color: var(--60-color);
+  transition: all 0.2s linear;
+}
+.about-card-reborn-two .button-container .explore:hover {
+  background-color: var(--60-color);
+  color: var(--text-color);
+  border: none;
+}
+
 .about-card {
   position: absolute;
   background-color: var(--30-color);
@@ -393,7 +594,7 @@ section {
   .about-card {
     display: none;
   }
-  .about-card-two {
+  .about-card-two, .about-card-reborn-two {
     display: block;
   }
   .about {
@@ -421,9 +622,9 @@ section {
   transform: rotate(-90deg);
 }
 .timeline .book-2 {
-  top: 70rem;
+  top: 65rem;
   left: 0;
-  width: 15rem;
+  width: 10rem;
 }
 @media (max-width: 1800px) {
   .timeline .could-timeline-1 {
@@ -542,6 +743,9 @@ section {
     width: 80%;
     margin: 10px;
   }
+  .timeline ul li div time {
+    font-size: 0.6rem;
+  }
   .timeline ul li:nth-of-type(even) > div {
     left: -289px;
   }
@@ -552,6 +756,9 @@ section {
   }
   .timeline ul li div {
     width: calc(100vw - 120px);
+  }
+  .timeline ul li div time {
+    font-size: 0.7rem;
   }
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;
@@ -572,6 +779,7 @@ section {
   justify-content: center;
   gap: 1rem;
   padding-bottom: 2rem;
+  flex-wrap: wrap;
 }
 .guideline .guideline-container .guideline-flex .each-guide-line {
   padding: 1rem;
@@ -579,6 +787,8 @@ section {
   flex-direction: column;
   gap: 2rem;
   max-width: 25rem;
+  flex: 1fr;
+  border-left: 3px solid var(--60-color);
 }
 .guideline .guideline-container .guideline-flex .each-guide-line .img-exp-container {
   display: flex;
@@ -593,22 +803,15 @@ section {
   height: 3rem;
   width: 3rem;
 }
-.guideline .guideline-container .guideline-flex .guideline-middle {
-  border-left: 3px solid var(--60-color);
-  border-right: 3px solid var(--60-color);
-}
 @media (max-width: 1140px) {
   .guideline .guideline-container .guideline-flex {
     flex-direction: column;
   }
-  .guideline .guideline-container .guideline-middle {
-    border-left: none !important;
-    border-right: none !important;
-    border-top: 3px solid var(--60-color);
-    border-bottom: 3px solid var(--60-color);
-  }
   .guideline .guideline-container .each-guide-line {
     max-width: 100% !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 3px solid var(--60-color);
   }
 }
 .guideline .guideline-hero {
@@ -664,6 +867,61 @@ section {
 .throughout-wrapper {
   padding: 0;
   background: var(--60-color);
+}
+.throughout-wrapper .about-card-reborn {
+  background-color: var(--30-color);
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 50rem;
+  margin-left: 5rem;
+  margin-right: 1rem;
+  margin-bottom: 7rem;
+}
+.throughout-wrapper .about-card-reborn h1 {
+  font-family: boston-angel;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  margin: 0 !important;
+  border: none !important;
+}
+.throughout-wrapper .about-card-reborn .button-container {
+  display: flex;
+  gap: 1rem;
+}
+.throughout-wrapper .about-card-reborn .button-container .button {
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  margin-top: 2rem;
+  flex: 1fr;
+  width: 100%;
+  cursor: pointer;
+}
+.throughout-wrapper .about-card-reborn .button-container .register {
+  background-color: var(--10-color);
+  transition: all 0.2s linear;
+}
+.throughout-wrapper .about-card-reborn .button-container .register:hover {
+  background-color: var(--60-color);
+}
+.throughout-wrapper .about-card-reborn .button-container .explore {
+  border: 2px solid var(--60-color);
+  background-color: transparent;
+  color: var(--60-color);
+  transition: all 0.2s linear;
+}
+.throughout-wrapper .about-card-reborn .button-container .explore:hover {
+  background-color: var(--60-color);
+  color: var(--text-color);
+  border: none;
+}
+@media (max-width: 666px) {
+  .throughout-wrapper .about-card-reborn {
+    display: none;
+  }
 }
 .throughout-wrapper h1 {
   font-size: 3rem;
@@ -953,62 +1211,12 @@ section {
 .footer .logo {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 2rem;
 }
 .footer .logo svg {
   width: 2rem;
   color: var(--text-color);
-}
-
-nav {
-  background-color: var(--60-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1rem;
-  height: 4rem;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  box-sizing: border-box;
-}
-nav .logo {
-  display: flex;
-  align-items: center;
-  width: -moz-fit-content !important;
-  width: fit-content !important;
-}
-nav .logo img {
-  width: 4rem;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-nav ul li a {
-  padding: 0.5rem;
-  cursor: pointer;
-}
-@media (max-width: 740px) {
-  nav ul {
-    display: none;
-  }
-}
-nav button {
-  height: 2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 3px;
-  flex: 1fr;
-  cursor: pointer;
-  background-color: var(--10-color);
-  transition: all 0.2s linear;
-  padding: 0 1rem;
-}
-nav button:hover {
-  background-color: var(--30-color);
 }
 
 .animate-on-observe {
