@@ -1441,12 +1441,18 @@ h1{
     }
 
     .sponsor-video{
-        aspect-ratio: 16/9;
+        //aspect-ratio: 16/9;
         width: 500px;
         position: absolute;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+    }
+
+    .image{
+        border-radius: 10px;
+        top: 55%;
 
     }
 

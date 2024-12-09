@@ -1169,12 +1169,15 @@ nav .mobile .inner ul .download:hover {
   margin: 0 auto;
 }
 .sponsor .sponsor-video {
-  aspect-ratio: 16/9;
   width: 500px;
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.sponsor .image {
+  border-radius: 10px;
+  top: 55%;
 }
 @media (max-width: 1110px) {
   .sponsor .cloud {
