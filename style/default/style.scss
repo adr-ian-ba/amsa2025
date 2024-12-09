@@ -1040,7 +1040,25 @@ h1{
         display: block;
         margin: 1rem auto;
         background-color: var(--10-color);
-        color: var(--60-color);
+        color: var(--text-color);
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            border: solid 2px var(--10-color);
+            background-color: var(--30-color);
+            color: var(--10-color);
+        }
+    }
+
+    .guide{
+        background-color: var(--60-color);
+        color: var(--text-color);
+
+        &:hover{
+            border: solid 2px var(--60-color);
+            background-color: var(--30-color);
+            color: var(--60-color);
+        }
     }
   }
 

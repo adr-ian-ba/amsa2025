@@ -842,6 +842,21 @@ nav .mobile .inner ul .download:hover {
   display: block;
   margin: 1rem auto;
   background-color: var(--10-color);
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+}
+.guideline .button-guideline:hover {
+  border: solid 2px var(--10-color);
+  background-color: var(--30-color);
+  color: var(--10-color);
+}
+.guideline .guide {
+  background-color: var(--60-color);
+  color: var(--text-color);
+}
+.guideline .guide:hover {
+  border: solid 2px var(--60-color);
+  background-color: var(--30-color);
   color: var(--60-color);
 }
 
