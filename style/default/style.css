@@ -765,7 +765,8 @@ nav .mobile .inner ul .download:hover {
     width: calc(100vw - 120px);
   }
   .timeline ul li div time {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    font-weight: bold;
   }
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;

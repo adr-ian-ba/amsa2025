@@ -924,7 +924,8 @@ h1{
             width: calc(100vw - 120px);
 
             time{
-                font-size: .7rem;
+                font-size: .6rem;
+                font-weight: bold;
             }
           }
           &:nth-of-type(even) {
