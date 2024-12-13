@@ -860,6 +860,10 @@ nav .mobile .inner ul .download:hover {
   background-color: var(--30-color);
   color: var(--60-color);
 }
+.guideline .register {
+  font-family: boston-angel;
+  font-size: 1.5rem;
+}
 
 @keyframes pulseGlow {
   0% {
