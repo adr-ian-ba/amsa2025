@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.desktop')
+    if (window.scrollY > 250) {
+        nav.classList.add('glassmorphism')
+    } else {
+        nav.classList.remove('glassmorphism')
+    }
+})
 
   const burger = document.querySelector('.burger')
   const middle = document.querySelector('.middle')
